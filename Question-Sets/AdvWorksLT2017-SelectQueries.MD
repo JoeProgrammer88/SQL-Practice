@@ -27,3 +27,14 @@ notice the schema name "SalesLT" in front of the table name?
 
 ## Questions
 
+1) Select the FirstName, LastName, and CompanyName of all Customers whose company name contains the word "Bike". Sort the results by LastName, then FirstName, then CompanyName.
+
+2) Select all the customers who do not have a middle name.
+
+3) Select all the customers with a first name of "Mike" whose phone number starts with 454
+
+4) Select all of the Products that are Red and have a ListPrice between $500 and $1500
+
+5) Using your solution from question 4, add another condition to narrow your previous results to only include Products with a weight over 9000.
+
+6) Select all of the Products that have a name containing "Mountain Frame" or "Road Frame" and have a Color of "Red". Sort the results by Color in descending order and then by Name in ascending order
