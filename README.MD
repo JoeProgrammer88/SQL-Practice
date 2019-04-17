@@ -13,3 +13,7 @@ students who have taken up to two college level SQL courses.
 
 Students can submit feedback through GitHub as issues, send an email to my work email,
 or message me on Discord.
+
+## Question Sets
+
+[AdventureWorksLT2017 - SELECT Queries](Question-Sets/AdvWorksLT2017-SelectQueries.MD)
