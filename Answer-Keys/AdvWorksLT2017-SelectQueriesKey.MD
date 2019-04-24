@@ -86,14 +86,78 @@ contains the word "Bike". Sort the results by LastName, then FirstName, then Com
 
 The following questions will not specifically point out a table/columns that you need to work with. You will have to look at the data in the database and think about the query you need to code and result set you need to solve a problem.
 
-1) A customer comes in and is asks if you carry medium sports shorts and what colors they come in.
+1) A customer comes in and asks if you carry medium sports shorts and what colors they come in.
+
+<details><summary>Show Answer #1</summary>
+
+```sql
+    SELECT Name
+        , Color
+        --, Size
+    FROM SalesLT.Product
+    WHERE Name LIKE '%sports short%' AND
+        Size = 'M' -- M for medium
+```
+</details>
 
 2) A customer asks if anybody at their company "Sharp Bikes" is a customer. If yes, what is their phone number?
+<details><summary>Show Answer #2</summary>
+
+```sql
+    SELECT FirstName
+        , LastName
+        , Phone
+    FROM SalesLT.Customer
+    WHERE CompanyName = 'Sharp Bikes' 
+```
+</details>
 
 3) A customer with a high-end store wants to know what the three most expensive wheels are for any bike.
 
+<details><summary>Show Answer #3</summary>
+
+```sql
+    SELECT TOP 3 Name
+        , ListPrice
+    FROM SalesLT.Product
+    -- Looking in the ProductCategory table shows 21 = Wheels
+    WHERE ProductCategoryID = 21 
+    --WHERE Name LIKE '%wheel%'
+    ORDER BY ListPrice DESC
+```
+</details>
+
 4) A customer, Gary Vargas from Exercise Center, wants to know what email we have on file for him.
+<details><summary>Show Answer #4</summary>
+
+```sql
+    SELECT EmailAddress
+    FROM SalesLT.Customer
+    WHERE FirstName = 'Gary' AND LastName = 'Vargas'
+        AND CompanyName = 'Exercise Center'
+```
+</details>
 
 5) Which products don't have a custom thumbnail photo available?
+<details><summary>Show Answer #5</summary>
+
+```sql
+    SELECT ProductID
+        , Name
+        , ThumbnailPhotoFileName
+    FROM SalesLT.Product
+    WHERE ThumbNailPhotoFileName LIKE 'no_image_available%'
+```
+</details>
 
 6) Which products did we start selling in 2005?
+<details><summary>Show Answer #6</summary>
+
+```sql
+    SELECT *
+    FROM SalesLT.Product
+    WHERE YEAR(SellStartDate) = 2005 -- The YEAR function only looks at the year of the expression
+    --WHERE SellStartDate >= 'Jan 01, 2005' AND SellStartDate < 'Jan 01, 2006'
+
+```
+</details>

@@ -43,7 +43,7 @@ notice the schema name "SalesLT" in front of the table name?
 ## Story Problems
 The following questions will not specifically point out a table/columns that you need to work with. You will have to look at the data in the database and think about the query you need to code and result set you need to solve a problem.
 
-1) A customer comes in and is asks if you carry medium sports shorts and what colors they come in.
+1) A customer comes in and asks if you carry medium sports shorts and what colors they come in.
 
 2) A customer asks if anybody at their company "Sharp Bikes" is a customer. If yes, what is their phone number?
 
